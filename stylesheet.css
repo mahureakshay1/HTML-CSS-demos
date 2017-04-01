@@ -1,0 +1,50 @@
+* {
+    margin: 0px;
+    padding: :0px;
+}
+
+body {
+    background-color: #000;
+}
+.flying-text {
+    list-style: none;
+    color: white;
+    position: absolute;
+    margin-left: 50%;
+    vertical-align: middle;
+    left: -200px;
+    width: 500px;
+    top: 25%;
+    /*transform:translateX(-50%) translateY(-50%);*/
+}
+.flying-text li {
+    display: inline-block;
+    font-size: 6em;
+    font-family: monospace;
+    font-weight: 200;
+    opacity: 1;
+    transition: all 2.5s ease;
+    -webkit-transition: all 2.5s ease;
+}
+
+.flying-text.hidden li {
+    opacity: 0;
+}
+.flying-text.hidden li:nth-child(1) {transform: translateX(-300px) translateY(-300px);}
+.flying-text.hidden li:nth-child(2) {transform: translateX(-200px) translateY(200px);}
+.flying-text.hidden li:nth-child(3) {transform: translateX(-150px) translateY(-200px);}
+.flying-text.hidden li:nth-child(4) {transform: translateX(200px) translateY(100px);}
+.flying-text.hidden li:nth-child(5) {transform: translateX(100px) translateY(300px);}
+.flying-text.hidden li:nth-child(6) {transform: translateX(-200px) translateY(-200px);}
+.flying-text.hidden li:nth-child(7) {transform: translateX(500px) translateY(200px);}
+
+@media screen and (max-width: 768px) {
+    .flying-text {
+        width: 260px;
+        margin-left: 50%;
+        left: -150px;
+    }
+    .flying-text li {
+        font-size: 4em;
+    }
+}
